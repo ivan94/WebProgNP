@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			body{
+				margin: 0px;
+				font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+			}
+			header{
+				display: block;
+				width: 100%;
+				height: 60px;
+				background: rgb(214, 214, 214);
+			}
+			.menu{
+				max-width: 1050px;
+				margin: 0 auto;
+				padding: 0;
+				height: 100%;
+			}
+			.menu a{
+				text-decoration: none;
+				color: black;
+			}
+			.menu li.menuitem{
+				height: 100%;
+				width: 24%;
+				display: inline-block;
+				line-height: 60px;
+				text-align: center;
+				cursor: pointer;
+				
+			}
+			.menu li:hover{
+				background: rgb(194, 194, 194);
+			}
+			.submenu{
+				display: table;
+				list-style: none;
+				padding: 0px;
+				width: 100%;
+				background: rgb(214, 214, 214);
+				border-bottom-right-radius: 4px;
+				border-bottom-left-radius: 4px;
+				visibility: hidden;
+			}
+			.menu li.menuitem:hover .submenu{
+				visibility: visible;
+			}
+		</style>
+	</head>
+	
+	<body>
+	<header>
+		<ul class="menu">
+			<a href="#"><li class="menuitem">
+				Menu 1
+				<ul class="submenu">
+					<li> Ola</li>
+					<li> Ola</li>
+					<li> Ola</li>
+				</ul>
+			</li></a>
+			<a href="#"><li class="menuitem">Menu 2</li></a>
+			<a href="#"><li class="menuitem">Menu 3</li></a>
+			<a href="#"><li class="menuitem">Menu 4</li></a>
+		</ul>
+	</header>
+	</body>
+</html>
