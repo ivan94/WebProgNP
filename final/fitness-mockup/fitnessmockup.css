@@ -5,3 +5,15 @@
 .averages .panel.panel-default .panel-body h1{
 	margin: 10px 0px;
 }
+
+.navbar.no-margin{
+	margin-bottom: 0px;
+}
+
+.affix{
+	width: 255px;
+	top: 20px;
+}
+body{
+	position: relative;
+}

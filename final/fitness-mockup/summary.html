@@ -29,7 +29,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="#">Fitness tracker</a>
+						<a class="navbar-brand" href="summary.html">Fitness tracker</a>
 					</div>
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
@@ -54,7 +54,7 @@
 									</li>
 									<li class="divider"></li>
 									<li>
-										<a href="#">Logout</a>
+										<a href="cover.html">Logout</a>
 									</li>
 								</ul>
 							</li>
@@ -65,7 +65,9 @@
 		</header>
 
 		<div class="container">
-			<h1>Summary</h1>
+			<div class="page-header">
+				<h1>Summary</h1>
+			</div>
 			<p>
 				Hello Ivan, here is a summary of your meals and exercises
 			</p>
@@ -158,60 +160,74 @@
 				</div>
 			</form>
 
-			<h3>Meals</h3>
-			<table class="table table-striped">
-				<thead>
-					<tr>
-						<th>Date</th>
-						<th>Meal</th>
-						<th>Foods</th>
-						<th>Total calories</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Today - 8:30PM</td>
-						<td>Dinner</td>
-						<td>Cheese Burguer, French Fries</td>
-						<td>637 cal</td>
-					</tr>
-					<tr>
-						<td>09/08/14 - 1:30PM</td>
-						<td>Lunch</td>
-						<td>Rice, Beans, Chicken, Mashed Potatoes, Broccoli</td>
-						<td>518 cal</td>
-					</tr>
-				</tbody>
-			</table>
-			<h3>Exercises</h3>
-			<table class="table table-striped">
-				<thead>
-					<tr>
-						<th>Date</th>
-						<th>Exercise</th>
-						<th>Time spent</th>
-						<th>Distance</th>
-						<th>Calories burned</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Today - 8:30PM</td>
-						<td>Swimming</td>
-						<td>00:30</td>
-						<td>1.3 miles</td>
-						<td>100 cal</td>
-					</tr>
-					<tr>
-						<td>Today - 6:30AM</td>
-						<td>Running</td>
-						<td>01:13</td>
-						<td>3 miles</td>
-						<td>209 cal</td>
-					</tr>
-				</tbody>
-			</table>
+			<ul class="nav nav-tabs" role="tablist">
+				<li class="active">
+					<a href="#meals" role="tab" data-toggle="tab">Meals</a>
+				</li>
+				<li>
+					<a href="#exercises" role="tab" data-toggle="tab">Exercises</a>
+				</li>
+			</ul>
 
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="meals">
+					<h3>Meals</h3>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Date</th>
+								<th>Meal</th>
+								<th>Foods</th>
+								<th>Total calories</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Today - 8:30PM</td>
+								<td>Dinner</td>
+								<td>Cheese Burguer, French Fries</td>
+								<td>637 cal</td>
+							</tr>
+							<tr>
+								<td>09/08/14 - 1:30PM</td>
+								<td>Lunch</td>
+								<td>Rice, Beans, Chicken, Mashed Potatoes, Broccoli</td>
+								<td>518 cal</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="tab-pane fade" id="exercises">
+					<h3>Exercises</h3>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Date</th>
+								<th>Exercise</th>
+								<th>Time spent</th>
+								<th>Distance</th>
+								<th>Calories burned</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Today - 8:30PM</td>
+								<td>Swimming</td>
+								<td>00:30</td>
+								<td>1.3 miles</td>
+								<td>100 cal</td>
+							</tr>
+							<tr>
+								<td>Today - 6:30AM</td>
+								<td>Running</td>
+								<td>01:13</td>
+								<td>3 miles</td>
+								<td>209 cal</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
 		</div>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
