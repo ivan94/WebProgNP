@@ -8,22 +8,22 @@ $view = null;
 $format = isset($_REQUEST['format']) ? $_REQUEST['format'] : 'web';
 
 $nav = "nav-main.php";
-$active_tab = 1;
+$active_tab = 0;
 
 switch ($action . '_' . $method) {
 	case 'create_POST':
 		break;
 	case 'update_POST':
-		$view = "meals/index.php";
+		$view = "summary/index.php";
 		break;
 	case 'delete_GET':
 		break;
 	case 'delete_POST':
-		$view = "meals/index.php";
+		$view = "summary/index.php";
 		break;
 	case 'index_GET':
 	default:
-		$view = "meals/index.php";
+		$view = "summary/index.php";
 		break;
 }
 

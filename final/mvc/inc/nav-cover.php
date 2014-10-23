@@ -8,7 +8,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="cover.html">Fitness tracker</a>
+			<a class="navbar-brand" href="cover.php">Fitness tracker</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -50,7 +50,7 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<a class="btn btn-primary" href="summary.html"> Login </a>
+				<a class="btn btn-primary" href="summary.php"> Login </a>
 			</div>
 		</div>
 	</div>

@@ -7,23 +7,22 @@ $method = isset($_SERVER['HTTP_METHOD']) ? $_SERVER['HTTP_METHOD'] : 'GET';
 $view = null;
 $format = isset($_REQUEST['format']) ? $_REQUEST['format'] : 'web';
 
-$nav = "nav-main.php";
-$active_tab = 1;
+$nav = "nav-cover.php";
 
 switch ($action . '_' . $method) {
 	case 'create_POST':
 		break;
 	case 'update_POST':
-		$view = "meals/index.php";
+		$view = "cover/index.php";
 		break;
 	case 'delete_GET':
 		break;
 	case 'delete_POST':
-		$view = "meals/index.php";
+		$view = "cover/index.php";
 		break;
 	case 'index_GET':
 	default:
-		$view = "meals/index.php";
+		$view = "cover/index.php";
 		break;
 }
 

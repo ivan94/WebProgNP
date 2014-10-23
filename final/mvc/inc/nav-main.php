@@ -8,20 +8,20 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="summary.html">Fitness tracker</a>
+			<a class="navbar-brand" href="summary.php">Fitness tracker</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li id="summary-navb">
-					<a href="summary.html">Summary</a>
+				<li id="summary-navb" <?php if ($active_tab == 0): ?> class="active" <?php endif ?>>
+					<a href="summary.php">Summary</a>
 				</li>
-				<li id="meals-navb">
-					<a href="meals.html">Meals</a>
+				<li id="meals-navb" <?php if ($active_tab == 1): ?> class="active" <?php endif ?>>
+					<a href="meals.php">Meals</a>
 				</li>
-				<li id="exercises-navb">
-					<a href="exercises.html">Exercises</a>
+				<li id="exercises-navb" <?php if ($active_tab == 2): ?> class="active" <?php endif ?>>
+					<a href="exercises.php">Exercises</a>
 				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
@@ -33,7 +33,7 @@
 						</li>
 						<li class="divider"></li>
 						<li>
-							<a href="cover.html">Logout</a>
+							<a href="cover.php">Logout</a>
 						</li>
 					</ul>
 				</li>
