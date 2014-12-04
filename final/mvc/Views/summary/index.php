@@ -11,7 +11,7 @@
 			<br>
 			<small>How much of your daily calories you consumed today</small></h2>
 			<div class="progress">
-				<div class="progress-bar progress-bar" role="progressbar" aria-valuenow="1600" aria-valuemin="0" aria-valuemax="2000" style="width: 80%;">
+				<div class="progress-bar progress-bar" role="progressbar" aria-valuenow="1600" aria-valuemin="0" aria-valuemax="2000" style="width: 0%;">
 					1600 cal (of 2000)
 				</div>
 			</div>
@@ -21,7 +21,7 @@
 			<br>
 			<small>How much of your daily exercise goal you already completed</small></h2>
 			<div class="progress">
-				<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="303" aria-valuemin="0" aria-valuemax="410" style="width: 74%;">
+				<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="303" aria-valuemin="0" aria-valuemax="410" style="width: 0%;">
 					303 cal (of 410)
 				</div>
 			</div>

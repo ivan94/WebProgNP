@@ -11,6 +11,9 @@ $nav = "nav-main.php";
 $active_tab = 1;
 
 switch ($action . '_' . $method) {
+    case 'create_GET':
+        $view = "meals/create.php";
+        break;
 	case 'create_POST':
 		break;
 	case 'update_POST':

@@ -9,6 +9,8 @@
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../content/css/fitnessmockup.css">
+		
+		<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,30 +19,37 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 	</head>
-	<body>
+	<body data-spy="scroll" data-target="#navpills1">
 		<header>
-			<div id="top-nav"><? include __DIR__ . '/../../inc/'.$nav; ?></div>
+			<div id="top-nav"><?
+            include __DIR__ . '/../../inc/' . $nav;
+ ?></div>
 		</header>
 		
-		<? include __DIR__ . '/../' . $view; ?>
+		<?
+            include __DIR__ . '/../' . $view;
+ ?>
 	
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 		<script type="text/javascript">
-			var id = 2;
 			$(function() {
-				$("#addFields").click(function() {
-					var html = "<br><div class='form-group'><label class='sr-only' for='foodInput" + id + "'>Food</label>";
-					html += "<input type='text' class='form-control' id='foodInput" + id + "' placeholder='Food'></div>";
-					html += "<div class='form-group'><label class='sr-only' for='quantityInput" + id + "'>Quantity</label>";
-					html += "<input type='text' class='form-control' id='quantityInput" + id + "' placeholder='Quantity'></div>";
-					html += "<div class='form-group'><label class='sr-only' for='caloriesInput" + id + "'>Calories</label>";
-					html += "<input type='text' class='form-control' id='caloriesInput" + id + "' placeholder='Calories'></div>";
+				$(".progress >  .progress-bar").each(function() {
+					var bar = $(this);
 
-					id++;
-					$("#submitNewMeal").before(html);
+					var valueMin = bar.attr("aria-valuemin");
+					var valueMax = bar.attr("aria-valuemax");
+					var valueNow = bar.attr("aria-valuenow");
+
+					valueMax = parseFloat(valueMax) - parseFloat(valueMin);
+					valueNow = parseFloat(valueNow) - parseFloat(valueMin);
+
+					var width = (valueNow / valueMax) * 100;
+					width = Math.round(width);
+					bar.animate({
+						width : width + "%"
+					}, 150);
 				});
 				$("#newExerciseForm *").tooltip();
 			});
