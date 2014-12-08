@@ -9,8 +9,9 @@
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../content/css/fitnessmockup.css">
-		
+
 		<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,39 +22,20 @@
 	</head>
 	<body data-spy="scroll" data-target="#navpills1">
 		<header>
-			<div id="top-nav"><?
-            include __DIR__ . '/../../inc/' . $nav;
- ?></div>
+			<div id="top-nav">
+				<?php
+                include __DIR__ . '/../../inc/' . $nav;
+				?>
+			</div>
 		</header>
-		
-		<?
-            include __DIR__ . '/../' . $view;
- ?>
-	
+
+		<?php
+        include __DIR__ . '/../' . $view;
+		?>
+
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-		<script type="text/javascript">
-			$(function() {
-				$(".progress >  .progress-bar").each(function() {
-					var bar = $(this);
-
-					var valueMin = bar.attr("aria-valuemin");
-					var valueMax = bar.attr("aria-valuemax");
-					var valueNow = bar.attr("aria-valuenow");
-
-					valueMax = parseFloat(valueMax) - parseFloat(valueMin);
-					valueNow = parseFloat(valueNow) - parseFloat(valueMin);
-
-					var width = (valueNow / valueMax) * 100;
-					width = Math.round(width);
-					bar.animate({
-						width : width + "%"
-					}, 150);
-				});
-				$("#newExerciseForm *").tooltip();
-			});
-		</script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 	</body>
 </html>

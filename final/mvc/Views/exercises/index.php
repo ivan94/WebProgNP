@@ -376,3 +376,8 @@
 		</div>
 	</div>
 </div>
+<script type="">
+	$(function() {
+		$("#newExerciseForm *").tooltip();
+	}); 
+</script>
