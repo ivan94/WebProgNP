@@ -26,20 +26,14 @@ return array(
     ),
     // application components
     'components' => array(
-        'user' => array(
-            // enable cookie-based authentication
-            'class' => 'WebUser',
-            'allowAutoLogin' => false,
-        ),
         // uncomment the following to enable URLs in path-format
         'urlManager' => array(
             'urlFormat' => 'path',
-            'showScriptName' => false,
+            //'showScriptName' => false,
             'rules' => array(
                 '<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-                '' => 'meals/index',
             ),
         ),
         /*'db' => array(
@@ -48,7 +42,7 @@ return array(
         // uncomment the following to use a MySQL database
         
         'db'=>array(
-            'connectionString' => 'mysql:host=localhost;dbname=testdrive',
+            'connectionString' => 'mysql:host=localhost;dbname=fernandi2_db',
             'emulatePrepare' => true,
             'username' => 'fernandi2',
             'password' => 's123194',
@@ -80,5 +74,7 @@ return array(
     'params' => array(
         // this is used in contact page
         'adminEmail' => 'fernandi2@hawkmail.newpaltz.edu',
+        'fb_app_id' => '1586199278268967',
+        'fb_app_secret' => '364ab04a4c8620a469455ca556241487',
     ),
 );

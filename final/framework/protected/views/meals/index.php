@@ -1,10 +1,11 @@
-<div class="container" ng-app="app" ng-controller='index'>
+<div class="container" ng-controller='meals'>
     <div class="page-header">
         <h1>Meals</h1>
     </div>
     <h2>Daily limit
         <br>
-        <small>How much of your daily limit you already completed</small></h2>
+        <small>How much of your daily limit you already completed</small>
+    </h2>
     <div class="progress">
         <div class="progress-bar {{class}}" role="progressbar" ng-style="{ width: (cur_calories / max_calories * 100) + '%' }">
             {{cur_calories}} cal (of {{max_calories}})
@@ -14,12 +15,41 @@
     <a id="newMealButton" class="btn btn-success" href="?action=create"> <i class="glyphicon glyphicon-plus"></i> Add </a>
 
     <div id="newMealFormHolder" style="display: none;">
-
+        <form class="form-inline">
+            <input type="hidden" name="id" ng-model="update_food.id">
+            <div class="form-group">
+                <label class="sr-only" for="exerciseSelect">Exercise</label>
+                <select ng-model="update_food.meal_type" ng-options="type.name for type in meal_types" class="form-control" name="meal_type">
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="foodInput">Food</label>
+                <input type="text" class="form-control" id="foodInput" placeholder="Food" ng-model="update_food.names">
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="caloriesInput">Calories</label>
+                <input type="text" class="form-control" id="caloriesInput" placeholder="Calories" ng-model="update_food.calories">
+            </div>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" ng-model="update_food.date"/>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group pull-right">
+                <button type="submit" class="btn btn-success" ng-click="save()">Enter</button>
+                <button id="cancelMealButton" class="btn btn-danger"></i> Cancel </button>
+            </div>
+            <br>
+        </form>
     </div>
-
+    <br>
+    <pre>{{resp}}</pre>
     <h2>Recent activity
         <br>
-        <small>Your activity history in a week</small></h2>
+        <small>Your activity history in the last 3 days</small>
+    </h2>
     <div ng-repeat='meal in meals'>
         <h4>{{meal.type}}</h4>
         <table class="table table-striped">
@@ -33,47 +63,17 @@
             </thead>
             <tbody>
                 <tr ng-repeat="row in meal.foods">
-            <input type="hidden" name="id" value="{{row.id}}" />
-            <td>{{row.date}}</td>
-            <td>{{row.names}}</td>
-            <td>{{row.calories}}</td>
-            <td></td>
-            </tr>
+                    <input type="hidden" name="id" value="{{row.id}}" />
+                    <td>{{row.date}}</td>
+                    <td>{{row.names}}</td>
+                    <td>{{row.calories}}</td>
+                    <td>
+                        <a ng-click="edit(row)" title="Edit" class="btn btn-default btn-sm toggle-modal">
+                            <i class="glyphicon glyphicon-pencil"></i>
+                        </a>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
 </div>
-
-<script type="text/javascript">
-            var app = angular.module('app', []).controller('index', function($scope, $http) {
-    $http.get('get').success(function(data) {
-    $scope.id = data.id;
-            $scope.cur_calories = data.cur_calories;
-            $scope.max_calories = data.max_calories;
-            $scope.meals = data.meals;
-            var width = ($scope.cur_calories / $scope.max_calories * 100)
-            if (width < 75) {
-    $scope.class = "progress-bar-success";
-    } else if (width >= 75 && width < 90) {
-    $scope.class = "progress-bar-warning";
-    } else {
-    $scope.class = "progress-bar-danger";
-    }
-    });
-            $('body').on('click', '.edit_meal', function(event) {
-
-    });
-    });</script>
-
-<script type="text/javascript">
-            $("#newMealButton").click(function() {
-    event.preventDefault();
-            $("#newMealFormHolder").load("", {
-    action : "create",
-            format : "plain"
-    }, function() {
-    $(this).slideDown(500);
-            $("#newMealButton").hide();
-    });
-    });
-</script>
