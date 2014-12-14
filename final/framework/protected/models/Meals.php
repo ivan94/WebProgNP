@@ -34,7 +34,7 @@ class Meals extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('created_at, updated_at, time, user_id, meal_type, food, calories', 'required'),
+            array('created_at, time, user_id, meal_type, food, calories', 'required'),
             array('meal_type, calories', 'numerical', 'integerOnly'=>true),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.

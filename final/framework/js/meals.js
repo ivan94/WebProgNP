@@ -1,13 +1,25 @@
 var $pageScope = null;
-var $pageHttp = null;
+var $pageHttp = null; 
+
 app.controller('meals', function ($scope, $http) {
     $pageScope = $scope;
     $pageHttp = $http;
+    $.blockUI({ 
+        css: { 
+            border: 'none', 
+            padding: '15px', 
+            backgroundColor: '#000', 
+            '-webkit-border-radius': '10px', 
+            '-moz-border-radius': '10px', 
+            opacity: .5, 
+            color: '#fff' 
+        }});
 });
 
 function loadPage() {
     $pageHttp.get(basePath + '/meals/getUserInfo/'+user.id+'?access_token='+access_token).success(function (data) {
         console.log(data);
+        $pageScope.loading = false;
         $pageScope.id = data.id;
         $pageScope.cur_calories = data.cur_calories;
         $pageScope.max_calories = data.max_calories;
@@ -26,11 +38,17 @@ function loadPage() {
             pkg.meal_id = pkg.id;
             pkg.id = user.id;
             pkg.access_token = access_token;
+            pkg.date = $("#datetimepicker1 input").val();
             $.post(basePath + '/meals/saveMeal/', pkg, function (data){
-                $pageScope.resp = data;
-                hideForm();
+                $pageScope.response = data;
+                if(data.status == 'success'){
+                    hideForm();
+                    loadPage();
+                }
                 $pageScope.$apply();
-            });
+                $("button, a").prop("disabled",false);
+            },'json');
+            $("button, a").prop("disabled",true);
         }
         
         $pageScope.edit = function (row){
@@ -42,10 +60,27 @@ function loadPage() {
             }
             showForm();
         }
+        $pageScope.delete = function(row){
+            $pageScope.deleteFood = row;
+            $("#deleteModal").modal();
+        }
+        $pageScope.confirmDeletion = function(food){
+            $.post(basePath + '/meals/deleteMeal/', {meal_id:food.id, id:user.id, access_token: access_token}, function(data){
+                $pageScope.response = data;
+                if(data.status == 'success'){
+                    loadPage();
+                }
+            }, 'json');
+        }
+        $.unblockUI();
     });
     $pageHttp.get(basePath + '/meals/getMealTypes').success(function (data) {
         $pageScope.meal_types = data;
-        $pageScope.update_food = {};
+        $pageScope.update_food = {
+            date: "",
+            names: "",
+            calories: ""
+        };
         $pageScope.update_food.meal_type = data[0];
     });
 
@@ -61,11 +96,11 @@ function loadPage() {
     
     function showForm(){
         event.preventDefault();
-        $("#newMealFormHolder").slideDown(500);
+        $("#newMealFormHolder").show(300);
         $("#newMealButton").hide();
     }
     function hideForm(){
-        $("#newMealFormHolder").slideUp(500, function () {
+        $("#newMealFormHolder").hide(300, function () {
             $("#newMealButton").show();
         });
     }
