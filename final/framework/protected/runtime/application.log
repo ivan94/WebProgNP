@@ -1,0 +1,577 @@
+2014/12/13 14:25:42 [error] [php] strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'America/New_York' for 'EST/-5.0/no DST' instead (/home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php:68)
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(133): MealsController->runAction()
+#2 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): MealsController->filterAccessControl()
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): FBAccessTokenFilter->filter()
+#8 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php(82): CFilterChain->run()
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): MealsController->filterUserInfo()
+#10 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): MealsController->runActionWithFilters()
+#13 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): MealsController->run()
+#14 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CWebApplication->run()
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/meals/saveMeal/
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php (68)
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php (82)
+in /home/fernandi2/WWW/WP2014/final/framework/index.php (10)
+2014/12/13 14:25:47 [error] [php] strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'America/New_York' for 'EST/-5.0/no DST' instead (/home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php:68)
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(133): MealsController->runAction()
+#2 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): MealsController->filterAccessControl()
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): FBAccessTokenFilter->filter()
+#8 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php(82): CFilterChain->run()
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): MealsController->filterUserInfo()
+#10 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): MealsController->runActionWithFilters()
+#13 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): MealsController->run()
+#14 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CWebApplication->run()
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/meals/saveMeal/
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php (68)
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php (82)
+in /home/fernandi2/WWW/WP2014/final/framework/index.php (10)
+2014/12/13 14:25:48 [error] [php] strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'America/New_York' for 'EST/-5.0/no DST' instead (/home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php:68)
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(133): MealsController->runAction()
+#2 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): MealsController->filterAccessControl()
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): FBAccessTokenFilter->filter()
+#8 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php(82): CFilterChain->run()
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): MealsController->filterUserInfo()
+#10 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): MealsController->runActionWithFilters()
+#13 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): MealsController->run()
+#14 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CWebApplication->run()
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/meals/saveMeal/
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php (68)
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php (82)
+in /home/fernandi2/WWW/WP2014/final/framework/index.php (10)
+2014/12/13 14:39:07 [error] [php] strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'America/New_York' for 'EST/-5.0/no DST' instead (/home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php:68)
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(133): MealsController->runAction()
+#2 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): MealsController->filterAccessControl()
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): FBAccessTokenFilter->filter()
+#8 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php(82): CFilterChain->run()
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): MealsController->filterUserInfo()
+#10 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): MealsController->runActionWithFilters()
+#13 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): MealsController->run()
+#14 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CWebApplication->run()
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/meals/saveMeal/
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php (68)
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php (82)
+in /home/fernandi2/WWW/WP2014/final/framework/index.php (10)
+2014/12/13 14:39:47 [error] [php] strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'America/New_York' for 'EST/-5.0/no DST' instead (/home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php:75)
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(133): MealsController->runAction()
+#2 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): MealsController->filterAccessControl()
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): FBAccessTokenFilter->filter()
+#8 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php(82): CFilterChain->run()
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): MealsController->filterUserInfo()
+#10 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): MealsController->runActionWithFilters()
+#13 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): MealsController->run()
+#14 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CWebApplication->run()
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/meals/saveMeal/
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php (75)
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php (82)
+in /home/fernandi2/WWW/WP2014/final/framework/index.php (10)
+2014/12/13 14:40:16 [error] [php] strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'America/New_York' for 'EST/-5.0/no DST' instead (/home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php:68)
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(133): MealsController->runAction()
+#2 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): MealsController->filterAccessControl()
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): FBAccessTokenFilter->filter()
+#8 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php(82): CFilterChain->run()
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): MealsController->filterUserInfo()
+#10 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): MealsController->runActionWithFilters()
+#13 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): MealsController->run()
+#14 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CWebApplication->run()
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/meals/saveMeal/
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php (68)
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php (82)
+in /home/fernandi2/WWW/WP2014/final/framework/index.php (10)
+2014/12/13 14:41:56 [error] [php] Undefined index: date (/home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php:68)
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(286): MealsController->runAction()
+#1 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): MealsController->runActionWithFilters()
+#2 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): MealsController->run()
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CWebApplication->run()
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/meals/saveMeal
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php (68)
+in /home/fernandi2/WWW/WP2014/final/framework/index.php (10)
+2014/12/13 14:42:25 [error] [php] strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'America/New_York' for 'EST/-5.0/no DST' instead (/home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php:68)
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(286): MealsController->runAction()
+#2 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): MealsController->runActionWithFilters()
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): MealsController->run()
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CWebApplication->run()
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/meals/saveMeal?date=12%2F10%2F2014+1:39+AM
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php (68)
+in /home/fernandi2/WWW/WP2014/final/framework/index.php (10)
+2014/12/13 16:46:21 [error] [php] Undefined index: date (/home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php:78)
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(133): MealsController->runAction()
+#1 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): MealsController->filterAccessControl()
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): FBAccessTokenFilter->filter()
+#7 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php(99): CFilterChain->run()
+#8 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): MealsController->filterUserInfo()
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): MealsController->runActionWithFilters()
+#12 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): MealsController->run()
+#13 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CWebApplication->run()
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/meals/saveMeal/
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php (78)
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php (99)
+in /home/fernandi2/WWW/WP2014/final/framework/index.php (10)
+2014/12/13 16:50:27 [error] [php] Undefined index: date (/home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php:78)
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(133): MealsController->runAction()
+#1 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): MealsController->filterAccessControl()
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): FBAccessTokenFilter->filter()
+#7 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php(99): CFilterChain->run()
+#8 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): MealsController->filterUserInfo()
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): MealsController->runActionWithFilters()
+#12 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): MealsController->run()
+#13 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CWebApplication->run()
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/meals/saveMeal/
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php (78)
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php (99)
+in /home/fernandi2/WWW/WP2014/final/framework/index.php (10)
+2014/12/13 17:03:47 [error] [php] Undefined index: date (/home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php:77)
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(133): MealsController->runAction()
+#1 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): MealsController->filterAccessControl()
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): FBAccessTokenFilter->filter()
+#7 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php(98): CFilterChain->run()
+#8 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): MealsController->filterUserInfo()
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): MealsController->runActionWithFilters()
+#12 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): MealsController->run()
+#13 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CWebApplication->run()
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/meals/saveMeal/?date&names&calories&meal_type[id]=1&id=948221238541310&access_token=CAAWio8yGMicBAAtTp4qpV0LwDWwtKdiJwY2MwBLXaKEMjxsIl8w0Ne6wrCHTYZADINmJZCyF9ZBCMHzpyn0VveUXlNOMbe6sTHqAObQo3pAV87vSAH4VEfShVC4kYmN0QKI0SDH4ZBomHM9rEVmZBZC7VkOwlqTCknnpRZBB8RjUwazs9V3j9DFQh1KrRV94pzbS50XKyOw7oOu54m7Ai3k
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php (77)
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php (98)
+in /home/fernandi2/WWW/WP2014/final/framework/index.php (10)
+2014/12/13 17:28:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "exercises".' in /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('exercises')
+#1 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/exercises
+HTTP_REFERER=http://cs.newpaltz.edu/~fernandi2/WP2014/final/framework/index.php/meals
+---
+2014/12/13 18:25:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "deleteMeal".' in /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(270): CController->missingAction('deleteMeal')
+#1 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): CController->run('deleteMeal')
+#2 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('meals/deleteMea...')
+#3 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/meals/deleteMeal/
+HTTP_REFERER=http://cs.newpaltz.edu/~fernandi2/WP2014/final/framework/index.php/meals
+---
+2014/12/13 18:45:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login".' in /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('login')
+#1 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/login
+HTTP_REFERER=http://cs.newpaltz.edu/~fernandi2/WP2014/final/framework/index.php/meals
+---
+2014/12/13 23:48:03 [error] [exception.CException] exception 'CException' with message 'Property "MealsController.time" is not defined.' in /home/fernandi2/WWW/WP2014/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php(144): CComponent->__get('time')
+#1 /home/fernandi2/WWW/WP2014/yii/framework/web/actions/CInlineAction.php(49): MealsController->actionGetUserInfo()
+#2 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#10 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php(117): CFilterChain->run()
+#11 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): MealsController->filterUserInfo(Object(CFilterChain))
+#12 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): CController->run('getUserInfo')
+#16 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('meals/getUserIn...')
+#17 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CApplication->run()
+#19 {main}
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/meals/getUserInfo/948221238541310?access_token=CAAWio8yGMicBAHticmJes63esCWJGFD46BgMtvgbBicrjQV6HuuqZBWx4XPoCZA3lZCy5Rn4wOa3wP2bAETICEKZC6qg06b2BF9Tj2tzpfTB1QWWjI5iBVrjWtTZAdxFmvo3sm5QcsyNJkMTfVUGdEHcIho22ZCxewDDy3Ty7NSZADqnkKtY1gAPyjighZBhrYZCFcNfEftst5uUe7YkAm0dJ
+HTTP_REFERER=http://cs.newpaltz.edu/~fernandi2/WP2014/final/framework/index.php/meals
+---
+2014/12/13 23:48:19 [error] [exception.CException] exception 'CException' with message 'Property "MealsController.time" is not defined.' in /home/fernandi2/WWW/WP2014/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php(144): CComponent->__get('time')
+#1 /home/fernandi2/WWW/WP2014/yii/framework/web/actions/CInlineAction.php(49): MealsController->actionGetUserInfo()
+#2 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#10 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/MealsController.php(117): CFilterChain->run()
+#11 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): MealsController->filterUserInfo(Object(CFilterChain))
+#12 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): CController->run('getUserInfo')
+#16 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('meals/getUserIn...')
+#17 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CApplication->run()
+#19 {main}
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/meals/getUserInfo/948221238541310?access_token=CAAWio8yGMicBAHticmJes63esCWJGFD46BgMtvgbBicrjQV6HuuqZBWx4XPoCZA3lZCy5Rn4wOa3wP2bAETICEKZC6qg06b2BF9Tj2tzpfTB1QWWjI5iBVrjWtTZAdxFmvo3sm5QcsyNJkMTfVUGdEHcIho22ZCxewDDy3Ty7NSZADqnkKtY1gAPyjighZBhrYZCFcNfEftst5uUe7YkAm0dJ
+---
+2014/12/14 01:12:45 [error] [exception.CException] exception 'CException' with message 'Property "ProfileController.active_tab" is not defined.' in /home/fernandi2/WWW/WP2014/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/final/framework/protected/views/layouts/main.php(40): CComponent->__get('active_tab')
+#1 /home/fernandi2/WWW/WP2014/yii/framework/web/CBaseController.php(126): require('/home/fernandi2...')
+#2 /home/fernandi2/WWW/WP2014/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/fernandi2...', Array, true)
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(784): CBaseController->renderFile('/home/fernandi2...', Array, true)
+#4 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php(17): CController->render('index')
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/actions/CInlineAction.php(49): ProfileController->actionIndex()
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): CController->run('')
+#10 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('profile')
+#11 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CApplication->run()
+#13 {main}
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/profile
+---
+2014/12/14 12:54:28 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/home/fernandi2/WWW/WP2014/final/framework/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /home/fernandi2/WWW/WP2014/yii/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/home/fernandi2...')
+#1 /home/fernandi2/WWW/WP2014/yii/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /home/fernandi2/WWW/WP2014/yii/framework/gii/GiiModule.php(143): CAssetManager->publish('/home/fernandi2...')
+#3 /home/fernandi2/WWW/WP2014/yii/framework/base/CComponent.php(111): GiiModule->getAssetsUrl()
+#4 /home/fernandi2/WWW/WP2014/yii/framework/base/CModule.php(105): CComponent->__get('assetsUrl')
+#5 /home/fernandi2/WWW/WP2014/yii/framework/gii/views/layouts/main.php(5): CModule->__get('assetsUrl')
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/CBaseController.php(126): require('/home/fernandi2...')
+#7 /home/fernandi2/WWW/WP2014/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/fernandi2...', Array, true)
+#8 /home/fernandi2/WWW/WP2014/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/home/fernandi2...', Array, true)
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div class="con...')
+#10 /home/fernandi2/WWW/WP2014/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div class="con...')
+#11 /home/fernandi2/WWW/WP2014/yii/framework/web/CBaseController.php(206): COutputProcessor->run()
+#12 /home/fernandi2/WWW/WP2014/yii/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#13 /home/fernandi2/WWW/WP2014/yii/framework/gii/views/layouts/column1.php(7): CBaseController->endContent()
+#14 /home/fernandi2/WWW/WP2014/yii/framework/web/CBaseController.php(126): require('/home/fernandi2...')
+#15 /home/fernandi2/WWW/WP2014/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/fernandi2...', Array, true)
+#16 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(784): CBaseController->renderFile('/home/fernandi2...', Array, true)
+#17 /home/fernandi2/WWW/WP2014/yii/framework/gii/controllers/DefaultController.php(47): CController->render('login', Array)
+#18 /home/fernandi2/WWW/WP2014/yii/framework/web/actions/CInlineAction.php(49): DefaultController->actionLogin()
+#19 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#20 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#21 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#23 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/default/log...')
+#24 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#25 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CApplication->run()
+#26 {main}
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/gii/default/login
+---
+2014/12/14 13:59:44 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '948221238541310' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `ftrack_users` (`id`, `created_at`, `gender`, `age`, `height`, `weight`, `diet_goal`, `activity_level`, `cal_limit`, `exc_goal`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9).
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php (70)
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php (30)
+in /home/fernandi2/WWW/WP2014/final/framework/index.php (10)
+2014/12/14 13:59:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '948221238541310' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `ftrack_users` (`id`, `created_at`, `gender`, `age`, `height`, `weight`, `diet_goal`, `activity_level`, `cal_limit`, `exc_goal`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9)' in /home/fernandi2/WWW/WP2014/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/fernandi2/WWW/WP2014/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php(70): CActiveRecord->save()
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/actions/CInlineAction.php(49): ProfileController->actionSave()
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#8 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php(30): CFilterChain->run()
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): ProfileController->filterUserInfo(Object(CFilterChain))
+#10 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): CController->run('save')
+#14 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('profile/save')
+#15 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CApplication->run()
+#17 {main}
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/profile/save/
+HTTP_REFERER=http://cs.newpaltz.edu/~fernandi2/WP2014/final/framework/index.php/profile
+---
+2014/12/14 13:59:59 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '948221238541310' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `ftrack_users` (`id`, `created_at`, `gender`, `age`, `height`, `weight`, `diet_goal`, `activity_level`, `cal_limit`, `exc_goal`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9).
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php (70)
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php (30)
+in /home/fernandi2/WWW/WP2014/final/framework/index.php (10)
+2014/12/14 13:59:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '948221238541310' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `ftrack_users` (`id`, `created_at`, `gender`, `age`, `height`, `weight`, `diet_goal`, `activity_level`, `cal_limit`, `exc_goal`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9)' in /home/fernandi2/WWW/WP2014/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/fernandi2/WWW/WP2014/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php(70): CActiveRecord->save()
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/actions/CInlineAction.php(49): ProfileController->actionSave()
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#8 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php(30): CFilterChain->run()
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): ProfileController->filterUserInfo(Object(CFilterChain))
+#10 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): CController->run('save')
+#14 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('profile/save')
+#15 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CApplication->run()
+#17 {main}
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/profile/save/
+HTTP_REFERER=http://cs.newpaltz.edu/~fernandi2/WP2014/final/framework/index.php/profile
+---
+2014/12/14 14:00:02 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '948221238541310' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `ftrack_users` (`id`, `created_at`, `gender`, `age`, `height`, `weight`, `diet_goal`, `activity_level`, `cal_limit`, `exc_goal`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9).
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php (70)
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php (30)
+in /home/fernandi2/WWW/WP2014/final/framework/index.php (10)
+2014/12/14 14:00:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '948221238541310' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `ftrack_users` (`id`, `created_at`, `gender`, `age`, `height`, `weight`, `diet_goal`, `activity_level`, `cal_limit`, `exc_goal`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9)' in /home/fernandi2/WWW/WP2014/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/fernandi2/WWW/WP2014/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php(70): CActiveRecord->save()
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/actions/CInlineAction.php(49): ProfileController->actionSave()
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#8 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php(30): CFilterChain->run()
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): ProfileController->filterUserInfo(Object(CFilterChain))
+#10 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): CController->run('save')
+#14 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('profile/save')
+#15 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CApplication->run()
+#17 {main}
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/profile/save/
+HTTP_REFERER=http://cs.newpaltz.edu/~fernandi2/WP2014/final/framework/index.php/profile
+---
+2014/12/14 14:00:03 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '948221238541310' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `ftrack_users` (`id`, `created_at`, `gender`, `age`, `height`, `weight`, `diet_goal`, `activity_level`, `cal_limit`, `exc_goal`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9).
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php (70)
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php (30)
+in /home/fernandi2/WWW/WP2014/final/framework/index.php (10)
+2014/12/14 14:00:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '948221238541310' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `ftrack_users` (`id`, `created_at`, `gender`, `age`, `height`, `weight`, `diet_goal`, `activity_level`, `cal_limit`, `exc_goal`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9)' in /home/fernandi2/WWW/WP2014/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/fernandi2/WWW/WP2014/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php(70): CActiveRecord->save()
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/actions/CInlineAction.php(49): ProfileController->actionSave()
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#8 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php(30): CFilterChain->run()
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): ProfileController->filterUserInfo(Object(CFilterChain))
+#10 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): CController->run('save')
+#14 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('profile/save')
+#15 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CApplication->run()
+#17 {main}
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/profile/save/
+HTTP_REFERER=http://cs.newpaltz.edu/~fernandi2/WP2014/final/framework/index.php/profile
+---
+2014/12/14 14:00:18 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '948221238541310' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `ftrack_users` (`id`, `created_at`, `gender`, `age`, `height`, `weight`, `diet_goal`, `activity_level`, `cal_limit`, `exc_goal`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9).
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php (70)
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php (30)
+in /home/fernandi2/WWW/WP2014/final/framework/index.php (10)
+2014/12/14 14:00:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '948221238541310' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `ftrack_users` (`id`, `created_at`, `gender`, `age`, `height`, `weight`, `diet_goal`, `activity_level`, `cal_limit`, `exc_goal`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9)' in /home/fernandi2/WWW/WP2014/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/fernandi2/WWW/WP2014/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php(70): CActiveRecord->save()
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/actions/CInlineAction.php(49): ProfileController->actionSave()
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#8 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php(30): CFilterChain->run()
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): ProfileController->filterUserInfo(Object(CFilterChain))
+#10 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): CController->run('save')
+#14 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('profile/save')
+#15 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CApplication->run()
+#17 {main}
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/profile/save/
+HTTP_REFERER=http://cs.newpaltz.edu/~fernandi2/WP2014/final/framework/index.php/profile
+---
+2014/12/14 14:00:24 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '948221238541310' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `ftrack_users` (`id`, `created_at`, `gender`, `age`, `height`, `weight`, `diet_goal`, `activity_level`, `cal_limit`, `exc_goal`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9).
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php (70)
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php (30)
+in /home/fernandi2/WWW/WP2014/final/framework/index.php (10)
+2014/12/14 14:00:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '948221238541310' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `ftrack_users` (`id`, `created_at`, `gender`, `age`, `height`, `weight`, `diet_goal`, `activity_level`, `cal_limit`, `exc_goal`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9)' in /home/fernandi2/WWW/WP2014/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/fernandi2/WWW/WP2014/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php(70): CActiveRecord->save()
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/actions/CInlineAction.php(49): ProfileController->actionSave()
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#8 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php(30): CFilterChain->run()
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): ProfileController->filterUserInfo(Object(CFilterChain))
+#10 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): CController->run('save')
+#14 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('profile/save')
+#15 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CApplication->run()
+#17 {main}
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/profile/save/
+HTTP_REFERER=http://cs.newpaltz.edu/~fernandi2/WP2014/final/framework/index.php/profile
+---
+2014/12/14 14:04:13 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '948221238541310' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `ftrack_users` (`id`, `created_at`, `gender`, `age`, `height`, `weight`, `diet_goal`, `activity_level`, `cal_limit`, `exc_goal`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9).
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php (70)
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php (30)
+in /home/fernandi2/WWW/WP2014/final/framework/index.php (10)
+2014/12/14 14:04:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '948221238541310' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `ftrack_users` (`id`, `created_at`, `gender`, `age`, `height`, `weight`, `diet_goal`, `activity_level`, `cal_limit`, `exc_goal`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9)' in /home/fernandi2/WWW/WP2014/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/fernandi2/WWW/WP2014/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php(70): CActiveRecord->save()
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/actions/CInlineAction.php(49): ProfileController->actionSave()
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#8 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php(30): CFilterChain->run()
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): ProfileController->filterUserInfo(Object(CFilterChain))
+#10 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): CController->run('save')
+#14 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('profile/save')
+#15 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CApplication->run()
+#17 {main}
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/profile/save/
+HTTP_REFERER=http://cs.newpaltz.edu/~fernandi2/WP2014/final/framework/index.php/profile
+---
+2014/12/14 14:12:09 [error] [php] Undefined index: age (/home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php:62)
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(133): ProfileController->runAction()
+#1 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): FBAccessTokenFilter->filter()
+#3 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php(30): CFilterChain->run()
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CInlineFilter.php(58): ProfileController->filterUserInfo()
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): ProfileController->runActionWithFilters()
+#8 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): ProfileController->run()
+#9 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CWebApplication->run()
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/profile/save/
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php (62)
+in /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ProfileController.php (30)
+in /home/fernandi2/WWW/WP2014/final/framework/index.php (10)
+2014/12/14 15:47:29 [error] [exception.CException] exception 'CException' with message 'ExercisesController cannot find the requested view "índex".' in /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php:878
+Stack trace:
+#0 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(782): CController->renderPartial('??ndex', NULL, true)
+#1 /home/fernandi2/WWW/WP2014/final/framework/protected/controllers/ExercisesController.php(5): CController->render('??ndex')
+#2 /home/fernandi2/WWW/WP2014/yii/framework/web/actions/CInlineAction.php(49): ExercisesController->actionIndex()
+#3 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/fernandi2/WWW/WP2014/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(282): CController->run('')
+#7 /home/fernandi2/WWW/WP2014/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('exercises')
+#8 /home/fernandi2/WWW/WP2014/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /home/fernandi2/WWW/WP2014/final/framework/index.php(10): CApplication->run()
+#10 {main}
+REQUEST_URI=/~fernandi2/WP2014/final/framework/index.php/exercises
+HTTP_REFERER=http://cs.newpaltz.edu/~fernandi2/WP2014/final/framework/index.php/meals
+---

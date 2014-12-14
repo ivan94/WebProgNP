@@ -19,9 +19,9 @@ class MealsController extends CController {
     
     public function filters() {
         return array(
-            'userInfo + getUserInfo, saveMeal, deleteMeal',
+            'userInfo + getUserInfo, save, delete',
             array(
-                'application.filters.FBAccessTokenFilter + getUserInfo, saveMeal, deleteMeal',
+                'application.filters.FBAccessTokenFilter + getUserInfo, save, delete',
                 'access_token' => isset($_REQUEST['access_token'])?$_REQUEST['access_token']:NULL,
                 'user_id' => isset($_REQUEST['id'])?$_REQUEST['id']:NULL,
             ),
@@ -64,7 +64,7 @@ class MealsController extends CController {
         echo $json;
     }
     
-    public function actionDeleteMeal(){
+    public function actionDelete(){
         $n = Meals::model()->deleteByPk($_REQUEST['meal_id']);
         $resp = new stdClass();
         if($n == 1){
@@ -82,7 +82,7 @@ class MealsController extends CController {
     }
 
     //Test string: http://cs.newpaltz.edu/~fernandi2/WP2014/final/framework/index.php/meals/saveMeal/?date&names&calories&meal_type[id]=1&id=948221238541310&access_token=CAAWio8yGMicBAAtTp4qpV0LwDWwtKdiJwY2MwBLXaKEMjxsIl8w0Ne6wrCHTYZADINmJZCyF9ZBCMHzpyn0VveUXlNOMbe6sTHqAObQo3pAV87vSAH4VEfShVC4kYmN0QKI0SDH4ZBomHM9rEVmZBZC7VkOwlqTCknnpRZBB8RjUwazs9V3j9DFQh1KrRV94pzbS50XKyOw7oOu54m7Ai3k
-    public function actionSaveMeal(){
+    public function actionSave(){
         date_default_timezone_set("America/New_York"); 
         $meal = new Meals();
         
@@ -121,6 +121,10 @@ class MealsController extends CController {
     public function actionGetUserInfo() {
         $id = $_REQUEST['id'];
         
+        $user = Users::model()->findByPk($id);
+        
+        $resp = new stdClass();
+        
         $criteria = new CDbCriteria();
         $criteria->condition = "user_id=:ID";
         $criteria->params=array(':ID'=>$id);
@@ -133,8 +137,14 @@ class MealsController extends CController {
         $json = "{";
         $json_types = array();
         
+        if($user == null){
+            $json .= "\"new_user\":true,";
+        }else{
+            $json .= "\"new_user\":false,";
+        }
+        
         $cur_cal = 0;
-        $max_cal = 2000;
+        $max_cal = $user != null? $user->cal_limit:2000;
         foreach($meals as $meal){
             if (!isset($json_types[$meal->mealType->name])) {
                 $json_types[$meal->mealType->name] = "";
