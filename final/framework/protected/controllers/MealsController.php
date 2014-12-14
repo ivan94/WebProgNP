@@ -140,7 +140,10 @@ class MealsController extends CController {
                 $json_types[$meal->mealType->name] = "";
             }
             $json_types[$meal->mealType->name] .= $meal->encodeJSON().",";
-            $cur_cal += $meal->calories;
+            //only add if the meal was today
+            if(date('m/d/Y', strtotime($meal->time)) == date('m/d/Y')){
+                $cur_cal += $meal->calories;
+            }
         }
         
         $json .= "\"cur_calories\":$cur_cal, \"max_calories\":$max_cal,\"meals\":[";

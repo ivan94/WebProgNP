@@ -31,38 +31,22 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="summary.php">Fitness tracker</a>
+                            <a class="navbar-brand" href="#">Fitness tracker</a>
                         </div>
-
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav">
-                                <li id="summary-navb" <?php if ($this->active_tab == 0): ?> class="active" <?php endif ?>>
-                                    <a href="<?php echo Yii::app()->createUrl("/") ?>">Summary</a>
-                                </li>
-                                <li id="meals-navb" <?php if ($this->active_tab == 1): ?> class="active" <?php endif ?>>
-                                    <a href="<?php echo Yii::app()->createUrl("/meals") ?>">Meals</a>
-                                </li>
-                                <li id="exercises-navb" <?php if ($this->active_tab == 2): ?> class="active" <?php endif ?>>
-                                    <a href="<?php echo Yii::app()->createUrl("/exercises") ?>">Exercises</a>
-                                </li>
-                            </ul>
+                        
+<!--                        <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img ng-src="{{picture_src}}" style="width: 40px; height: 40px; margin: -10px 1px" class="img-rounded"> Welcome {{fb.first_name}}<span class="caret"></span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li>
-                                            <a ng-click="logout()">Logout</a>
-                                        </li>
-                                    </ul>
+                                <li>
+                                    <fb:login-button scope="public_profile,email" onlogin="checkLoginStatus();">
+                                    </fb:login-button>
                                 </li>
                             </ul>
-                        </div><!-- /.navbar-collapse -->
-                    </div><!-- /.container-fluid -->
+                        </div>-->
+                    </div><!-- /.navbar-collapse -->
                 </nav>
             </div>
         </header>
-
+        
         <?php echo $content; ?>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -74,34 +58,18 @@
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.66.0-2013.10.09/jquery.blockUI.min.js"></script>
 
         <script type="text/javascript">
-            var basePath = '<?php echo Yii::app()->createUrl("/") ?>';
-            var user = null;
-            var access_token = null;
-            var $layoutScope = null;
+//            var basePath = '<?php echo Yii::app()->createUrl("/") ?>';
+//            var user = null;
+//            var access_token = null;
+//            var $layoutScope = null;
             var app = angular.module('app', []).controller('index', function($scope) {
                 $layoutScope = $scope;
             });
             
-            function loadTemplate(){
+            function checkLoginStatus(){
                 FB.getLoginStatus(function (response) {
                     if (response.status === 'connected') {
-                        access_token = response.authResponse.accessToken;
-                        $layoutScope.logout = function (){
-                            FB.logout(function(response) {
-                                 window.location.href = '<?php echo Yii::app()->createUrl("/login")?>';
-                            });
-                        }
-                        FB.api('/me', function (response) {
-                            user = response;
-                            $layoutScope.fb = response;
-                            $layoutScope.picture_src = 'http://graph.facebook.com/'+user.id+'/picture'
-                            $layoutScope.$apply(function(){
-                                loadPage();
-                            });
-                            console.log(response);
-                        });
-                    } else {
-                        window.location.href = '<?php echo Yii::app()->createUrl("/login")?>';
+                        window.location.href = '<?php echo Yii::app()->createUrl("/")?>';
                     }
                 });
             }
@@ -112,7 +80,7 @@
                     xfbml : true,
                     version : 'v2.2'
                 });
-                loadTemplate();
+                checkLoginStatus();
             };
             ( function(d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0];
@@ -126,8 +94,8 @@
             }(document, 'script', 'facebook-jssdk'));
         </script>
 
-        <script src="<?php echo Yii::app()->createUrl("../js/$this->uniqueid.js") ?>"></script>
-
         <!-- Include all compiled plugins (below), or include individual files as needed -->
     </body>
 </html>
+
+
