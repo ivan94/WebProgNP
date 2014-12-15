@@ -17,30 +17,34 @@ app.controller('meals', function ($scope, $http) {
 });
 
 function loadPage() {
-    $pageHttp.get(basePath + '/meals/getUserInfo/'+user.id+'?access_token='+access_token).success(function (data) {
+    $pageHttp.get(basePath + '/exercises/getUserInfo/'+user.id+'?access_token='+access_token).success(function (data) {
         console.log(data);
         if(!data.new_user){
-            $pageScope.loading = false;
-            $pageScope.id = data.id;
             $pageScope.cur_calories = data.cur_calories;
-            $pageScope.max_calories = data.max_calories;
-            $pageScope.meals = data.meals;
-            var width = ($pageScope.cur_calories / $pageScope.max_calories * 100);
-            if (width < 75) {
-                $pageScope.class = "progress-bar-success";
-            } else if (width >= 75 && width < 90) {
+            $pageScope.exc_goal = data.exc_goal;
+            $pageScope.exercises = data.exercises;
+            var width = ($pageScope.cur_calories / $pageScope.exc_goal * 100);
+            if (width < 10) {
+                $pageScope.class = "progress-bar-danger";
+            } else if (width >= 10 && width < 50) {
                 $pageScope.class = "progress-bar-warning";
             } else {
-                $pageScope.class = "progress-bar-danger";
+                $pageScope.class = "progress-bar-success";
             }
+            
+            $pageScope.update_exercise = {
+                time: "",
+                exercise: "",
+                calories: ""
+            };
             $pageScope.save = function (){
                 var pkg = {};
-                angular.copy($pageScope.update_food,pkg);
-                pkg.meal_id = pkg.id;
+                angular.copy($pageScope.update_exercise,pkg);
+                pkg.exercise_id = pkg.id;
                 pkg.id = user.id;
                 pkg.access_token = access_token;
-                pkg.date = $("#datetimepicker1 input").val();
-                $.post(basePath + '/meals/save/', pkg, function (data){
+                pkg.time = $("#datetimepicker1 input").val();
+                $.post(basePath + '/exercises/save/', pkg, function (data){
                     $pageScope.response = data;
                     if(data.status == 'success'){
                         hideForm();
@@ -51,22 +55,17 @@ function loadPage() {
                 },'json');
                 $("button, a").prop("disabled",true);
             }
-
+//
             $pageScope.edit = function (row){
-                $pageScope.update_food = angular.copy(row);
-                for(i = 0; i<$pageScope.meal_types.length; i++){
-                    if($pageScope.meal_types[i].id == row.meal_type){
-                        $pageScope.update_food.meal_type = $pageScope.meal_types[i];
-                    }
-                }
+                $pageScope.update_exercise = angular.copy(row);
                 showForm();
             }
             $pageScope.delete = function(row){
-                $pageScope.deleteFood = row;
+                $pageScope.deleteExercise = row;
                 $("#deleteModal").modal();
             }
-            $pageScope.confirmDeletion = function(food){
-                $.post(basePath + '/meals/delete/', {meal_id:food.id, id:user.id, access_token: access_token}, function(data){
+            $pageScope.confirmDeletion = function(exercise){
+                $.post(basePath + '/exercises/delete/', {exercise_id:exercise.id, id:user.id, access_token: access_token}, function(data){
                     $pageScope.response = data;
                     if(data.status == 'success'){
                         loadPage();
@@ -78,21 +77,12 @@ function loadPage() {
             window.location.href = basePath + '/profile/';
         }
     });
-    $pageHttp.get(basePath + '/meals/getMealTypes').success(function (data) {
-        $pageScope.meal_types = data;
-        $pageScope.update_food = {
-            date: "",
-            names: "",
-            calories: ""
-        };
-        $pageScope.update_food.meal_type = data[0];
-    });
 
-    $("#cancelMealButton").click(function () {
+    $("#cancelExerciseButton").click(function () {
         event.preventDefault();
         hideForm();
     });
-    $("#newMealButton").click(function () {
+    $("#newExerciseButton").click(function () {
         event.preventDefault();
         showForm();
     });
@@ -100,12 +90,12 @@ function loadPage() {
     
     function showForm(){
         event.preventDefault();
-        $("#newMealFormHolder").show(300);
-        $("#newMealButton").hide();
+        $("#newExerciseFormHolder").show(300);
+        $("#newExerciseButton").hide();
     }
     function hideForm(){
-        $("#newMealFormHolder").hide(300, function () {
-            $("#newMealButton").show();
+        $("#newExerciseFormHolder").hide(300, function () {
+            $("#newExerciseButton").show();
         });
     }
 }

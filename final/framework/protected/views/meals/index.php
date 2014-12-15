@@ -21,7 +21,7 @@
     <div class="page-header" style="margin-top: 20px">
         <h1>Meals</h1>
     </div>
-    <h2>Daily limit
+    <h2>Daily Limit
         <br>
         <small>How much of your daily limit you already completed</small>
     </h2>

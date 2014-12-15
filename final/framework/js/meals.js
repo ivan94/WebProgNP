@@ -20,8 +20,6 @@ function loadPage() {
     $pageHttp.get(basePath + '/meals/getUserInfo/'+user.id+'?access_token='+access_token).success(function (data) {
         console.log(data);
         if(!data.new_user){
-            $pageScope.loading = false;
-            $pageScope.id = data.id;
             $pageScope.cur_calories = data.cur_calories;
             $pageScope.max_calories = data.max_calories;
             $pageScope.meals = data.meals;

@@ -123,8 +123,6 @@ class MealsController extends CController {
         
         $user = Users::model()->findByPk($id);
         
-        $resp = new stdClass();
-        
         $criteria = new CDbCriteria();
         $criteria->condition = "user_id=:ID";
         $criteria->params=array(':ID'=>$id);
