@@ -51,6 +51,7 @@ class Meals extends CActiveRecord
         // class name for the relations automatically generated below.
         return array(
             'mealType' => array(self::BELONGS_TO, 'MealTypes', 'meal_type'),
+            'mealFriends' => array(self::HAS_MANY, 'MealFriends', 'meal_id'),
         );
     }
 
@@ -73,7 +74,17 @@ class Meals extends CActiveRecord
     
     public function encodeJSON(){
         date_default_timezone_set("America/New_York");
-        return "{\"id\" : $this->id, \"meal_type\": \"$this->meal_type\",\"date\" : \"".date('m/d/Y g:i A', strtotime($this->time))."\", \"names\": \"$this->food\", \"calories\": $this->calories}";
+        $json = "{\"id\" : $this->id, \"meal_type\": \"$this->meal_type\",\"date\" : \"".date('m/d/Y g:i A', strtotime($this->time))."\", \"names\": \"$this->food\", \"calories\":$this->calories, \"friends\":[";
+        $friends = $this->mealFriends;
+        foreach ($friends as $f){
+            $json .= json_encode($f->getAttributes());
+            $json .= ",";
+        }
+        if(count($friends) > 0){
+            $json = substr($json, 0, strlen($json)-1);
+        }
+        $json .= "]}";
+        return $json;
     }
 
     /**

@@ -46,8 +46,8 @@
                 <h2 ng-show="update_food.id != null">Edit meal</h2>
                 <p>Please, enter your meal information</p>
                 <div class="form-group">
-                    <label class="sr-only" for="exerciseSelect">Exercise</label>
-                    <select ng-model="update_food.meal_type" ng-options="type.name for type in meal_types" class="form-control" name="meal_type">
+                    <label class="sr-only" for="mealSelect">Meal Type</label>
+                    <select id="mealTypeSelector" ng-model="update_food.meal_type" ng-options="type.name for type in meal_types" class="form-control" name="meal_type">
                     </select>
                 </div>
                 <div class="form-group" ng-class="response.errors.food != null?'has-error':''">
@@ -64,6 +64,12 @@
                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
                         </span>
                     </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label class="sr-only" for="friendsSelect">Friends</label>
+                    <select chosen multiple data-placeholder="Who was with you?" ng-model="update_food.friends" ng-options="friend.name for friend in friends" class="form-control" name="meal_type">
+                    </select>
                 </div>
                 <div class="form-group pull-right">
                     <button id="submitMealButton" type="submit" class="btn btn-success" ng-click="save()">Enter</button>

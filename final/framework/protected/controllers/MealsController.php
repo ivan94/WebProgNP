@@ -49,6 +49,10 @@ class MealsController extends CController {
     }
     
     public function actionDelete(){
+        $criteria = new CDbCriteria();
+        $criteria->condition = "meal_id=:ID";
+        $criteria->params=array(':ID'=>$_REQUEST['meal_id']);
+        MealFriends::model()->deleteAll($criteria);
         $n = Meals::model()->deleteByPk($_REQUEST['meal_id']);
         $resp = new stdClass();
         if($n == 1){
@@ -82,6 +86,17 @@ class MealsController extends CController {
         $meal->food = $_REQUEST['names'];
         $meal->calories = $_REQUEST['calories'];
         $meal->save();
+        
+        if(isset($_REQUEST['friends'])){
+            foreach ($_REQUEST['friends'] as $f){
+                $friend = new MealFriends();
+                $friend->meal_id = $meal->id;
+                $friend->created_at = date("Y-m-d H:i:s");
+                $friend->name = $f['name'];
+                $friend->picture_url = $f['picture']['data']['url'];
+                $friend->save();
+            }
+        }
         
         $resp = new stdClass();
         if(count($meal->getErrors())==0){

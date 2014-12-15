@@ -24,6 +24,7 @@ function loadPage() {
             $pageScope.cur_calories = data.cur_calories;
             $pageScope.max_calories = data.max_calories;
             $pageScope.meals = data.meals;
+            $pageScope.friends = user_friends;
             var width = ($pageScope.cur_calories / $pageScope.max_calories * 100);
             if (width < 75) {
                 $pageScope.class = "progress-bar-success";
@@ -86,6 +87,7 @@ function loadPage() {
             calories: ""
         };
         $pageScope.update_food.meal_type = data[0];
+        //$("#mealTypeSelector").chosen()
     });
 
     $("#cancelMealButton").click(function () {

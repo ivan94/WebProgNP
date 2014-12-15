@@ -23,3 +23,7 @@ html, body{
     height: 100%;
 }
 
+.chosen-container-multi{
+    width: 500px !important;
+}
+

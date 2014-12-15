@@ -6,7 +6,7 @@
                 Fitness tracker is a web application to help you keep track of your daily calorie consumption and exercises.<br>
                 Just login with your Facebook account and start using today!
             </p>
-            <fb:login-button scope="public_profile,email" size="xlarge" show_faces="false" auto_logout_link="false" onlogin="checkLoginStatus();"></fb:login-button>
+            <fb:login-button scope="public_profile,email,user_friends" size="xlarge" show_faces="false" auto_logout_link="false" onlogin="checkLoginStatus();"></fb:login-button>
         </div>
     </div>
 </div>

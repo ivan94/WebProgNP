@@ -9,7 +9,9 @@
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/css/bootstrap-datetimepicker.min.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.min.css">
         <link rel="stylesheet" href="<?php echo Yii::app()->createUrl("../css/fitnessmockup.css") ?>">
+        <link rel="stylesheet" href="<?php echo Yii::app()->createUrl("../css/chosen-spinner.css") ?>">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -74,15 +76,22 @@
         <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/js/bootstrap-datetimepicker.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.66.0-2013.10.09/jquery.blockUI.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js"></script>
+        <script src="<?php echo Yii::app()->createUrl("../js/chosen.js")?> "></script>
 
         <script type="text/javascript">
             var basePath = '<?php echo Yii::app()->createUrl("/") ?>';
             var user = null;
+            var user_friends;
             var access_token = null;
             var $layoutScope = null;
-            var app = angular.module('app', []).controller('index', function($scope) {
-                $layoutScope = $scope;
-            });
+            var app = angular.module('app', ['localytics.directives']).config([
+                '$parseProvider', function($parseProvider) {
+                    return $parseProvider.unwrapPromises(true);
+                    }
+                ]).controller('index', function($scope) {
+                    $layoutScope = $scope;
+                });
             
             function loadTemplate(){
                 FB.getLoginStatus(function (response) {
@@ -101,6 +110,10 @@
                                 loadPage();
                             });
                             console.log(response);
+                        });
+                        FB.api('/me/taggable_friends', function (response) {
+                            console.log(response);
+                            user_friends = response.data;
                         });
                     } else {
                         window.location.href = '<?php echo Yii::app()->createUrl("/login")?>';
