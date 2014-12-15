@@ -4,6 +4,7 @@ var $pageHttp = null;
 app.controller('exercises', function ($scope, $http) {
     $pageScope = $scope;
     $pageHttp = $http;
+    $pageScope.loaded = false;
     $.blockUI({ 
         css: { 
             border: 'none', 
@@ -73,6 +74,7 @@ function loadPage() {
                 }, 'json');
             }
             $.unblockUI();
+            $pageScope.loaded = true;
         }else{
             window.location.href = basePath + '/profile/';
         }

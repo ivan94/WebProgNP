@@ -1,4 +1,4 @@
-<div class="container" ng-controller="profile">
+<div class="container" ng-controller="profile" ng-show="loaded" >
     <h1>Your profile<br>
         <small ng-show="new_user">Welcome to Fitness Tracker! Please, provide some of your information to start using the application.</small>
         <small ng-show="!new_user">Hello, here you can update your information.</small></h1>

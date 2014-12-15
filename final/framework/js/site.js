@@ -4,6 +4,7 @@ var $pageHttp = null;
 app.controller('site', function ($scope, $http) {
     $pageScope = $scope;
     $pageHttp = $http;
+    $pageScope.loaded = false;
     $.blockUI({ 
         css: { 
             border: 'none', 
@@ -61,6 +62,7 @@ function loadPage() {
             window.location.href = basePath + '/profile/';
         }
         $.unblockUI();
+        $pageScope.loaded = true;
     });
 }
 

@@ -1,4 +1,4 @@
-<div class="container" ng-controller="site">
+<div class="container" ng-controller="site" ng-show="loaded" >
     <div class="row">
         <div class="col-sm-9">
             <div class="page-header" style="margin-top: 20px">

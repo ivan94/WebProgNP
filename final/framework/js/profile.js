@@ -4,6 +4,7 @@ var $pageHttp = null;
 app.controller('profile', function ($scope, $http) {
     $pageScope = $scope;
     $pageHttp = $http;
+    $pageScope.loaded = false;
     $.blockUI({
         css: {
             border: 'none',
@@ -67,6 +68,7 @@ function loadPage() {
             },'json');
         }
         $.unblockUI();
+        $pageScope.loaded = true;
     });
 }
 
