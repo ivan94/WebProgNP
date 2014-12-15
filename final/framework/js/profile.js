@@ -18,6 +18,7 @@ app.controller('profile', function ($scope, $http) {
 
 function loadPage() {
     $pageHttp.get(basePath + '/profile/getUserInfo/'+user.id+'?access_token='+access_token).success(function (data) {
+        $pageScope.new_user = data.new_user;
         if(data.new_user){
             $pageScope.user = {height: {}};
         }else{

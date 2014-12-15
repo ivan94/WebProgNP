@@ -5,6 +5,7 @@ class ExercisesController extends CController{
     public function actionIndex(){
         $this->render('index');
     }
+    
     public function filters() {
         return array(
             'userInfo + getUserInfo, save, delete',
@@ -13,7 +14,6 @@ class ExercisesController extends CController{
                 'access_token' => isset($_REQUEST['access_token'])?$_REQUEST['access_token']:NULL,
                 'user_id' => isset($_REQUEST['id'])?$_REQUEST['id']:NULL,
             ),
-            'accessControl'
         );
     }
     
@@ -36,7 +36,6 @@ class ExercisesController extends CController{
         $criteria->limit = 20;        
         $exercises = Exercises::model()->findAll($criteria);
         
-        $exercises = $exercises == NULL? array(): $exercises;
         
         $json = "{";
         $json_types = array();

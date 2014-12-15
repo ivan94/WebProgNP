@@ -13,7 +13,6 @@
  */
 class ProfileController extends CController{
     public $active_tab = 3;
-    
     public function filters() {
         return array(
             'userInfo + getUserInfo, save',

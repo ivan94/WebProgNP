@@ -51,6 +51,8 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img ng-src="{{picture_src}}" style="width: 40px; height: 40px; margin: -10px 1px" class="img-rounded"> Welcome {{fb.first_name}}<span class="caret"></span></a>
                                     <ul class="dropdown-menu" role="menu">
+                                        <li><a href="<?php echo Yii::app()->createUrl("/profile") ?>">Profile</a></li>
+                                        <li class="divider"></li>
                                         <li>
                                             <a ng-click="logout()">Logout</a>
                                         </li>

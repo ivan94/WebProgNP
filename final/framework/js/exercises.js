@@ -1,7 +1,7 @@
 var $pageScope = null;
 var $pageHttp = null; 
 
-app.controller('meals', function ($scope, $http) {
+app.controller('exercises', function ($scope, $http) {
     $pageScope = $scope;
     $pageHttp = $http;
     $.blockUI({ 

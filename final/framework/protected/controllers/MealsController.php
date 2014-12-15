@@ -25,22 +25,6 @@ class MealsController extends CController {
                 'access_token' => isset($_REQUEST['access_token'])?$_REQUEST['access_token']:NULL,
                 'user_id' => isset($_REQUEST['id'])?$_REQUEST['id']:NULL,
             ),
-            'accessControl'
-        );
-    }
-    
-    public function accessRules() {
-        return array(
-            array(
-                'allow',
-                'actions' => array('saveMeal'),
-                'verbs' => array('POST')
-            ),
-            array(
-                'deny',
-                'actions' => array('saveMeal'),
-                'verbs' => array('*')
-            ),
         );
     }
 
@@ -130,7 +114,6 @@ class MealsController extends CController {
         $criteria->limit = 20;
         $meals = Meals::model()->with('mealType')->findAll($criteria);
         
-        $meals = $meals == NULL? array(): $meals;
         
         $json = "{";
         $json_types = array();

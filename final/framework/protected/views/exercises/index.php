@@ -1,4 +1,4 @@
-<div class="container" ng-controller='meals'>
+<div class="container" ng-controller='exercises'>
     <!-- Modal -->
     <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">

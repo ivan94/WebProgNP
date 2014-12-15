@@ -17,7 +17,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="page-header" style="margin-top: 20px">
         <h1>Meals</h1>
     </div>
@@ -30,7 +30,7 @@
             {{cur_calories}} cal (of {{max_calories}})
         </div>
     </div>
-    
+
     <a id="newMealButton" class="btn btn-success" href="?action=create"> <i class="glyphicon glyphicon-plus"></i> Add </a>
     <br>
     <div id="newMealFormHolder" style="display: none;" class="panel panel-default">
@@ -73,7 +73,7 @@
             </form>
         </div>
     </div>
-    
+
     <br>
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -99,7 +99,7 @@
                     </thead>
                     <tbody>
                         <tr ng-repeat="row in meal.foods">
-                            <input type="hidden" name="id" value="{{row.id}}" />
+                            <input type="hidden" name="id" value="{{row.id}}" >
                             <td style="width: 20%">{{row.date}}</td>
                             <td>{{row.names}}</td>
                             <td style="width: 20%">{{row.calories}} cal</td>
